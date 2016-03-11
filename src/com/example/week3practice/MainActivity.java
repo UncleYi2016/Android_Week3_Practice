@@ -6,9 +6,20 @@ import android.view.*;
 import android.view.View.*;
 import android.widget.*;
 
+//  @paras:
+//		i: The number show in the text.
+//		btnPlus: A button to add 1 to the text.
+//		btnMinus: A button to minus 1 to the text.
+//		btnReset: A button to set 0 to the text.
+//		btnLogin: A button show name and password.
+//		checkBox: A meaningless checkBox, just for test.
+//	@functions:
+//		onCrate: Create any functions and classes you need at the beginning.
+//		setOnClickListener: Set a listener to this view and put anonymous classes in it.
 public class MainActivity extends Activity {
 	private static int i = 0;
 	@Override
+	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
