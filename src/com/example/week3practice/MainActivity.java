@@ -5,24 +5,33 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
-
+	private static int i = 0;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		final TextView t = (TextView) findViewById(R.id.textView1);
+		t.setText(Integer.toString(i));
 		
 		Button b = (Button)findViewById(R.id.button1);
-		MyClickListener l = new MyClickListener();
-		b.setOnClickListener(l);
+		b.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				final TextView t = (TextView) findViewById(R.id.textView1);
+				t.setText(Integer.toString(++i));
+				
+			}
+		});
 	}
 	
-//	public void OnClickButton(View v){
-//		Toast.makeText(this, R.id.button1, Toast.LENGTH_SHORT).show();
-//	}
+	public void OnClickButton(View v){
+		Toast.makeText(this, R.id.button1, Toast.LENGTH_SHORT).show();
+	}
 
 //	@Override
 //	public boolean onCreateOptionsMenu(Menu menu) {
