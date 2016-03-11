@@ -12,12 +12,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:orientation="vertical" >
 
-        <AnalogClock
-            android:id="@+id/analogClock1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
     </LinearLayout>
 
@@ -27,9 +31,8 @@
         android:orientation="vertical" >
 
         <Space
-            android:layout_width="20dp"
+            android:layout_width="match_parent"
             android:layout_height="30dp" />
-
 
     </LinearLayout>
 
@@ -37,124 +40,61 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center" >
+        android:gravity="center_vertical|center" >
 
         <Button
-            android:id="@+id/button1"
-            style="?android:attr/buttonStyleSmall"
+            android:id="@+id/btnPlus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="OnClickButton"
-            android:text="1" />
+            android:layout_gravity="center"
+            android:text="+1" />
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="match_parent" />
 
         <Button
-            android:id="@+id/button2"
-            style="?android:attr/buttonStyleSmall"
+            android:id="@+id/btnReset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="OnClickButton"
-            android:text="2" />
+            android:layout_gravity="center"
+            android:text="Reset" />
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="match_parent" />
 
         <Button
-            android:id="@+id/button3"
-            style="?android:attr/buttonStyleSmall"
+            android:id="@+id/btnMinus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:onClick="OnClickButton"
-            android:text="3" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center" >
-
-        <Button
-            android:id="@+id/button4"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="OnClickButton"
-            android:text="4" />
-
-        <Button
-            android:id="@+id/button5"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="OnClickButton"
-            android:text="5" />
-
-        <Button
-            android:id="@+id/button6"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="OnClickButton"
-            android:text="6" />
+            android:layout_gravity="center"
+            android:text="-1" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center" >
+        android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/button7"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="OnClickButton"
-            android:text="7" />
-
-        <Button
-            android:id="@+id/button8"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="OnClickButton"
-            android:text="8" />
-
-        <Button
-            android:id="@+id/button9"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="OnClickButton"
-            android:text="9" />
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center" >
+        android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/button10"
-            style="?android:attr/buttonStyleSmall"
+        <CheckBox
+            android:id="@+id/checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="OnClickButton"
-            android:text="*" />
-
-        <Button
-            android:id="@+id/button0"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="OnClickButton"
-            android:text="0" />
-
-        <Button
-            android:id="@+id/button11"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="OnClickButton"
-            android:text="#" />
+            android:layout_gravity="center"
+            android:text="CheckBox" />
 
     </LinearLayout>
 
@@ -165,42 +105,38 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="30dp" />
+            android:layout_height="30dp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
 
-        <CheckBox
-            android:id="@+id/checkBox1"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Left" />
+            android:ems="10" >
 
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Large Text"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <CheckBox
-            android:id="@+id/checkBox2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Right" />
+            <requestFocus />
+        </EditText>
 
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/editPwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Login" />
 
 </LinearLayout>
